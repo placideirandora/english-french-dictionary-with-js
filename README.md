@@ -1,4 +1,4 @@
-# english-french-dictionary-pi
+# ENGLISH FRENCH DICTIONARY (JAVASCRIPT)
 A web application of English and French dictionary.
 
 I developed this web application with HTML 5, CSS 3, and JavaScript.
