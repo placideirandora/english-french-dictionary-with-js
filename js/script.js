@@ -1,4 +1,4 @@
-function Initialisation() {
+function displayEnglishWords() {
   for (var loop = 0; loop < dictionary.length; loop++) {
     document.getElementById("english-words-list").innerHTML +=
       "<li onclick='display(" +
