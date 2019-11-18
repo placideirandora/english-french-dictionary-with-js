@@ -1,23 +1,23 @@
 function displayEnglishWords() {
-  for (var loop = 0; loop < dictionary.length; loop++) {
+  for (var word = 0; word < dictionary.length; word++) {
     document.getElementById("english-words-list").innerHTML +=
       "<li onclick='displayTranslation(" +
-      loop +
+      word +
       ")'>" +
-      dictionary[loop].english_word +
+      dictionary[word].english_word +
       "</li>";
   }
 }
 
-function displayTranslation(loop) {
+function displayTranslation(word) {
   document.getElementById("english-word-area").innerHTML =
-    "<h1>" + dictionary[loop].english_word + "</h1>";
+    "<h1>" + dictionary[word].english_word + "</h1>";
   document.getElementById("english-example-area").innerHTML =
-    "<p>" + dictionary[loop].english_word_example + "</p>";
+    "<p>" + dictionary[word].english_word_example + "</p>";
   document.getElementById("french-word-area").innerHTML =
-    "<h1>" + dictionary[loop].french_word + "</h1>";
+    "<h1>" + dictionary[word].french_word + "</h1>";
   document.getElementById("french-example-area").innerHTML =
-    "<p>" + dictionary[loop].french_word_example + "</p>";
+    "<p>" + dictionary[word].french_word_example + "</p>";
 }
 
 function search() {
@@ -26,16 +26,16 @@ function search() {
   if (word_to_find == "") {
     alert("No word found inside. Type in a word and try again!");
   } else {
-    for (var loop = 0; loop < dictionary.length; loop++) {
-      if (dictionary[loop].english_word == word_to_find) {
+    for (var word = 0; word < dictionary.length; word++) {
+      if (dictionary[word].english_word == word_to_find) {
         document.getElementById("english-word-area").innerHTML =
-          "<h1>" + dictionary[loop].english_word + "</h1>";
+          "<h1>" + dictionary[word].english_word + "</h1>";
         document.getElementById("english-example-area").innerHTML =
-          "<p>" + dictionary[loop].english_word_example + "</p>";
+          "<p>" + dictionary[word].english_word_example + "</p>";
         document.getElementById("french-word-area").innerHTML =
-          "<h1>" + dictionary[loop].french_word + "</h1>";
+          "<h1>" + dictionary[word].french_word + "</h1>";
         document.getElementById("french-example-area").innerHTML =
-          "<p>" + dictionary[loop].french_word_example + "</p>";
+          "<p>" + dictionary[word].french_word_example + "</p>";
 
         break;
       } else {
