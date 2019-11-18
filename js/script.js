@@ -1,5 +1,5 @@
-function displayEnglishWords() {
-  for (var word = 0; word < dictionary.length; word++) {
+const displayEnglishWords = () => {
+  for (let word = 0; word < dictionary.length; word++) {
     document.getElementById("english-words-list").innerHTML +=
       "<li onclick='displayTranslation(" +
       word +
@@ -9,7 +9,7 @@ function displayEnglishWords() {
   }
 }
 
-function displayTranslation(word) {
+const displayTranslation = (word) => {
   document.getElementById("english-word-area").innerHTML =
     "<h1>" + dictionary[word].english_word + "</h1>";
   document.getElementById("english-example-area").innerHTML =
@@ -20,13 +20,13 @@ function displayTranslation(word) {
     "<p>" + dictionary[word].french_word_example + "</p>";
 }
 
-function search() {
-  var word_to_find = document.getElementById("search-word").value;
+const search = () => {
+  const word_to_find = document.getElementById("search-word").value;
 
   if (word_to_find == "") {
     alert("No word found inside. Type in a word and try again!");
   } else {
-    for (var word = 0; word < dictionary.length; word++) {
+    for (const word = 0; word < dictionary.length; word++) {
       if (dictionary[word].english_word == word_to_find) {
         document.getElementById("english-word-area").innerHTML =
           "<h1>" + dictionary[word].english_word + "</h1>";
@@ -52,7 +52,7 @@ function search() {
   }
 }
 
-var dictionary = [
+const dictionary = [
   {
     english_word: "ABANDON",
     english_word_example: "He abandoned his motorbike in the mud.",
@@ -2197,8 +2197,8 @@ var dictionary = [
   {
     english_word: "TALKATIVE",
     english_word_example: "Some people are talkative.",
-    french_word: "BAVARD/BAVARDE",
-    french_word_example: "Quelques personnes sont bavardes."
+    french_word: "BAconstD/BAconstDE",
+    french_word_example: "Quelques personnes sont baconstdes."
   },
 
   {
