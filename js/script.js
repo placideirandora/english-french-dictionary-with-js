@@ -23,11 +23,11 @@ const displayTranslation = (word) => {
 const findWord = () => {
   const word_to_find = document.getElementById("word").value;
 
-  if (word_to_find == "") {
+  if (word_to_find === "") {
     alert("No word found inside. Type in a word and try again!");
   } else {
-    for (const word = 0; word < dictionary.length; word++) {
-      if (dictionary[word].english_word == word_to_find) {
+    for (let word = 0; word < dictionary.length; word++) {
+      if (dictionary[word].english_word === word_to_find) {
         document.getElementById("english-word-area").innerHTML =
           "<h1>" + dictionary[word].english_word + "</h1>";
         document.getElementById("english-example-area").innerHTML =
