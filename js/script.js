@@ -21,13 +21,13 @@ const displayTranslation = (word) => {
 }
 
 const findWord = () => {
-  const word_to_find = document.getElementById("word").value;
+  const wordToFind = document.getElementById("word").value;
 
-  if (word_to_find === "") {
+  if (wordToFind === "") {
     alert("No word found inside. Type in a word and try again!");
   } else {
     for (let word = 0; word < dictionary.length; word++) {
-      if (dictionary[word].english_word === word_to_find) {
+      if (dictionary[word].english_word === wordToFind) {
         document.getElementById("english-word-area").innerHTML =
           "<h1>" + dictionary[word].english_word + "</h1>";
         document.getElementById("english-example-area").innerHTML =
