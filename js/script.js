@@ -1,7 +1,7 @@
 function displayEnglishWords() {
   for (var loop = 0; loop < dictionary.length; loop++) {
     document.getElementById("english-words-list").innerHTML +=
-      "<li onclick='display(" +
+      "<li onclick='displayTranslation(" +
       loop +
       ")'>" +
       dictionary[loop].english_word +
@@ -9,7 +9,7 @@ function displayEnglishWords() {
   }
 }
 
-function display(loop) {
+function displayTranslation(loop) {
   document.getElementById("english-word-area").innerHTML =
     "<h1>" + dictionary[loop].english_word + "</h1>";
   document.getElementById("english-example-area").innerHTML =
