@@ -21,7 +21,7 @@ const displayTranslation = (word) => {
 }
 
 const findWord = () => {
-  const word_to_find = document.getElementById("search-word").value;
+  const word_to_find = document.getElementById("word").value;
 
   if (word_to_find == "") {
     alert("No word found inside. Type in a word and try again!");
