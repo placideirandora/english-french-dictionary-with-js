@@ -20,7 +20,7 @@ const displayTranslation = (word) => {
     "<p>" + dictionary[word].french_word_example + "</p>";
 }
 
-const search = () => {
+const findWord = () => {
   const word_to_find = document.getElementById("search-word").value;
 
   if (word_to_find == "") {
