@@ -14,11 +14,11 @@ The dictionary helps people learn French quickly with clear examples.
 ### Clone The Project
 
 ```
-$ git clone https://github.com/placiderapson/english-french-dictionary-with-js
+git clone https://github.com/placiderapson/english-french-dictionary-with-js
 ```
 
 ### Start The Project
 
 ```
-$ open 'index.html' with your favorite web browser
+open 'index.html' with your favorite web browser
 ```
