@@ -1,6 +1,24 @@
-# english-french-dictionary-pi
-A web application of English and French dictionary.
+# ENGLISH FRENCH DICTIONARY (JAVASCRIPT)
+A front-end web application of English and French dictionary with JavaScript.
 
-I developed this web application with HTML 5, CSS 3, and JavaScript.
+The dictionary helps people learn French quickly with clear examples.
 
-It can help people who already know English and want to learn French quickly with examples.
+## SOFTWARE TECHNOLOGIES 
+
+- HTML 5
+- CSS 3
+- JavaScript
+
+## GETTING STARTED
+
+### Clone The Project
+
+```
+git clone https://github.com/placiderapson/english-french-dictionary-with-js
+```
+
+### Start The Project
+
+```
+open 'index.html' with your favorite web browser
+```
