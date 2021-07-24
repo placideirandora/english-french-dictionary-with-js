@@ -25,7 +25,7 @@ body {
   margin-right: 10%;
 }
 
-.logo {
+.logo-container {
   float: left;
   padding-left: 20px;
 }
@@ -38,10 +38,9 @@ header {
   height: 80px;
   background-color: gold;
   line-height: 2.5;
-  cursor: context-menu;
 }
 
-.search-word {
+.search-field-container {
   padding: 20px;
   line-height: 2;
   background-color: lightgrey;
@@ -51,27 +50,26 @@ header {
   font-weight: bolder;
 }
 
-.search-word input[type="text"] {
+.search-field-container input[type="text"] {
   width: 60%;
   height: 30px;
   padding-left: 5px;
   font-family: verdana;
 }
 
-.search-word input[type="button"] {
+.search-field-container input[type="button"] {
   width: 35%;
   height: 34px;
   font-family: verdana;
 }
 
-.search-word input[type="button"]:hover {
+.search-field-container input[type="button"]:hover {
   cursor: pointer;
 }
 
-.english-words-list {
+.english-words-list-container {
   height: 420px;
   line-height: 2;
-  padding-bottom: 21px;
   width: 24.7%;
   background-color: ghostwhite;
   position: fixed;
@@ -82,24 +80,24 @@ header {
   overflow-y: scroll;
 }
 
-.english-words-list ul li {
+.english-words-list-container ul li {
   width: 50%;
   text-align: center;
 }
 
-.english-words-list ul {
+.english-words-list-container ul {
   list-style: none;
   margin-left: 110px;
   text-align: center;
 }
 
-.english-words-list ul li:hover {
+.english-words-list-container ul li:hover {
   cursor: pointer;
   color: dimgrey;
   transform: scale(1.5);
 }
 
-.word {
+.translation-container {
   background-color: rosybrown;
   width: 69.1%;
   height: 505px;
@@ -114,7 +112,6 @@ header {
   color: dimgrey;
   padding: 19px;
   height: 53px;
-  cursor: context-menu;
 }
 
 .french-word-area {
@@ -124,7 +121,6 @@ header {
   color: dimgrey;
   padding: 19px;
   height: 53px;
-  cursor: context-menu;
 }
 
 .english-example-area {
@@ -134,7 +130,6 @@ header {
   padding-top: 20px;
   border-bottom: dashed gold;
   font-size: 20px;
-  cursor: context-menu;
 }
 
 .french-example-area {
@@ -143,7 +138,6 @@ header {
   height: 113.5px;
   padding-top: 20px;
   font-size: 20px;
-  cursor: context-menu;
 }
 
 footer {
@@ -151,5 +145,4 @@ footer {
   height: 34px;
   padding-top: 15px;
   padding-bottom: 5px;
-  cursor: context-menu;
 }
