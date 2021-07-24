@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="shortcut icon" type="image/png" href="img/dictionary-icon.png"/>
-	<title>English-French Dictionary PI</title>
-</head>
-<body onload="displayEnglishWords()">
-	<div class="container">
-		<header>
-			<div class="logo">
-				<img src="img/placide-irandora-logo.png" width="200">
-		   	</div>
-			<h1>  ENGLISH - FRENCH DICTIONARY 1.0 </h1>
-		</header>
-		<div class="sub-menu"></div>
-		<div class="search-word">
-			<input type="text"  id="word" placeholder="Type In A Word">  <input type="button" onclick="findWord()" value="Search">
-		</div>
-		<div class="english-words-list">
-			<ul id="english-words-list"></ul>
-		</div>
-		<div class="word">
-			<div class="english-word-area" id="english-word-area"></div>
-			<div class="english-example-area" id="english-example-area"></div>
-			<div class="french-word-area" id="french-word-area"></div>
-			<div class="french-example-area" id="french-example-area"></div>
-			<footer>
-				<h3> Copyright &copy; 2018 Placide IRANDORA </h3>
-			</footer>
-		</div>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple English-French Dictionary" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/dictionary-icon.png" />
+    <script defer type="text/javascript" src="js/script.js"></script>
+    <title>English-French Dictionary</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER SECTION -->
+      <header>
+        <div class="logo-container">
+          <img src="img/placide-irandora-logo.png" width="200" />
+        </div>
+        <h1>ENGLISH - FRENCH DICTIONARY 1.0</h1>
+      </header>
+
+      <!-- SEARCH FIELD SECTION -->
+      <section class="search-field-container">
+        <input type="text" id="search-field" placeholder="Type In A Word" />
+        <input type="button" id="search-button" value="Search" />
+      </section>
+
+      <!-- ENGLISH WORDS LIST SECTION -->
+      <section class="english-words-list-container">
+        <ul id="english-words-list"></ul>
+      </section>
+
+      <!-- ENGLISH - FRENCH TRANSLATION SECTION -->
+      <section class="translation-container">
+        <div class="english-word-area" id="english-word-area"></div>
+        <div class="english-example-area" id="english-example-area"></div>
+        <div class="french-word-area" id="french-word-area"></div>
+        <div class="french-example-area" id="french-example-area"></div>
+        <footer>
+          <h3>Copyright &copy; 2018 Placide IRANDORA</h3>
+        </footer>
+      </section>
+    </div>
+  </body>
 </html>
-
-<script type="text/javascript" src="js/script.js"></script>
-
-<script type="text/javascript">
-	displayTranslation(0);
-</script>
-

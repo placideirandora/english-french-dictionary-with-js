@@ -1,56 +1,75 @@
-const displayEnglishWords = () => {
-  for (let word = 0; word < dictionary.length; word++) {
-    document.getElementById("english-words-list").innerHTML +=
+window.onload = () => {
+  displayEnglishWords(dictionary);
+  displayTranslation(0);
+};
+
+const searchField = document.getElementById("search-field");
+const searchButton = document.getElementById("search-button");
+const englishWordArea = document.getElementById("english-word-area");
+const englishExampleArea = document.getElementById("english-example-area");
+const frenchWordArea = document.getElementById("french-word-area");
+const frenchExampleArea = document.getElementById("french-example-area");
+const englishWordsList = document.getElementById("english-words-list");
+
+const isWordEmpty = (word) => word === "" || word.trim() === "";
+
+const displayEnglishWords = (bilingualDictionary) => {
+  for (const wordIndex in bilingualDictionary) {
+    englishWordsList.innerHTML +=
       "<li onclick='displayTranslation(" +
-      word +
+      wordIndex +
       ")'>" +
-      dictionary[word].english_word +
+      dictionary[wordIndex].english_word +
       "</li>";
   }
 };
 
-const displayTranslation = (word) => {
-  document.getElementById("english-word-area").innerHTML =
-    "<h1>" + dictionary[word].english_word + "</h1>";
-  document.getElementById("english-example-area").innerHTML =
-    "<p>" + dictionary[word].english_word_example + "</p>";
-  document.getElementById("french-word-area").innerHTML =
-    "<h1>" + dictionary[word].french_word + "</h1>";
-  document.getElementById("french-example-area").innerHTML =
-    "<p>" + dictionary[word].french_word_example + "</p>";
+const displayTranslation = (wordIndex) => {
+  englishWordArea.innerHTML =
+    "<h1>" + dictionary[wordIndex].english_word + "</h1>";
+  englishExampleArea.innerHTML =
+    "<p>" + dictionary[wordIndex].english_word_example + "</p>";
+  frenchWordArea.innerHTML =
+    "<h1>" + dictionary[wordIndex].french_word + "</h1>";
+  frenchExampleArea.innerHTML =
+    "<p>" + dictionary[wordIndex].french_word_example + "</p>";
 };
 
-const findWord = () => {
-  const wordToFind = document.getElementById("word").value;
+const displayNotFoundMessage = () => {
+  englishWordArea.innerHTML = "<h1> WORD NOT FOUND </h1>";
+  englishExampleArea.innerHTML =
+    "<p>The word is not currently included in this version 1.0 of the dictionary.</p>";
+  frenchWordArea.innerHTML = "<h1> MOT NON TROUV&Eacute </h1>";
+  frenchExampleArea.innerHTML =
+    "<p>Le mot n'est pas actuellement inclus dans cette version 1.0 du dictionnaire.</p>";
+};
 
-  if (wordToFind === "") {
+const findWord = (wordToFind) => {
+  if (isWordEmpty(wordToFind)) {
     alert("No word found inside. Type in a word and try again!");
   } else {
-    for (let word = 0; word < dictionary.length; word++) {
-      if (dictionary[word].english_word === wordToFind) {
-        document.getElementById("english-word-area").innerHTML =
-          "<h1>" + dictionary[word].english_word + "</h1>";
-        document.getElementById("english-example-area").innerHTML =
-          "<p>" + dictionary[word].english_word_example + "</p>";
-        document.getElementById("french-word-area").innerHTML =
-          "<h1>" + dictionary[word].french_word + "</h1>";
-        document.getElementById("french-example-area").innerHTML =
-          "<p>" + dictionary[word].french_word_example + "</p>";
-
+    for (const wordIndex in dictionary) {
+      if (dictionary[wordIndex].english_word === wordToFind) {
+        displayTranslation(wordIndex);
         break;
       } else {
-        document.getElementById("english-word-area").innerHTML =
-          "<h1> WORD NOT FOUND </h1>";
-        document.getElementById("english-example-area").innerHTML =
-          "<p> Make sure that the word is written in upper case. If it is, The word is not currently included in this version 1.0 of the dictionary.</p>";
-        document.getElementById("french-word-area").innerHTML =
-          "<h1> MOT NON TROUV&Eacute </h1>";
-        document.getElementById("french-example-area").innerHTML =
-          "<p> Soyez s&ucirc;r que le mot est &eacutecrit en majuscule. S'il est, Le mot n'est pas actuellement inclus dans cette version 1.0 du dictionnaire.</p>";
+        displayNotFoundMessage();
       }
     }
   }
 };
+
+const returnWordToFind = () => searchField.value.toUpperCase();
+
+searchButton.addEventListener("click", () => {
+  findWord(returnWordToFind());
+});
+
+searchField.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    findWord(returnWordToFind());
+  }
+});
 
 const dictionary = [
   {
