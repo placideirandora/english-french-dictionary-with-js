@@ -1,7 +1,7 @@
-# ENGLISH FRENCH DICTIONARY (JAVASCRIPT)
+# ENGLISH FRENCH DICTIONARY (VANILLA JAVASCRIPT)
 A front-end web application of English and French dictionary with JavaScript.
 
-The dictionary helps people learn French quickly with clear examples.
+The dictionary helps people learn French quickly with simple and clear examples.
 
 ## SOFTWARE TECHNOLOGIES 
 
@@ -14,7 +14,7 @@ The dictionary helps people learn French quickly with clear examples.
 ### Clone The Project
 
 ```
-git clone https://github.com/placiderapson/english-french-dictionary-with-js
+git clone https://github.com/placideirandora/english-french-dictionary-with-js
 ```
 
 ### Start The Project
