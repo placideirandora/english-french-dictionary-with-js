@@ -1,5 +1,5 @@
 window.onload = () => {
-  displayEnglishWords();
+  displayEnglishWords(dictionary);
   displayTranslation(0);
 };
 
@@ -13,13 +13,13 @@ const englishWordsList = document.getElementById("english-words-list");
 
 const isWordEmpty = (word) => word === "" || word.trim() === "";
 
-const displayEnglishWords = () => {
-  for (const word in dictionary) {
+const displayEnglishWords = (bilingualDictionary) => {
+  for (const wordIndex in bilingualDictionary) {
     englishWordsList.innerHTML +=
       "<li onclick='displayTranslation(" +
-      word +
+      wordIndex +
       ")'>" +
-      dictionary[word].english_word +
+      dictionary[wordIndex].english_word +
       "</li>";
   }
 };
@@ -44,15 +44,13 @@ const displayNotFoundMessage = () => {
     "<p>Le mot n'est pas actuellement inclus dans cette version 1.0 du dictionnaire.</p>";
 };
 
-const findWord = () => {
-  const wordToFind = searchField.value.toUpperCase();
-
+const findWord = (wordToFind) => {
   if (isWordEmpty(wordToFind)) {
     alert("No word found inside. Type in a word and try again!");
   } else {
-    for (const word in dictionary) {
-      if (dictionary[word].english_word === wordToFind) {
-        displayTranslation(word);
+    for (const wordIndex in dictionary) {
+      if (dictionary[wordIndex].english_word === wordToFind) {
+        displayTranslation(wordIndex);
         break;
       } else {
         displayNotFoundMessage();
@@ -61,10 +59,15 @@ const findWord = () => {
   }
 };
 
-searchButton.addEventListener("click", findWord);
+const returnWordToFind = () => searchField.value.toUpperCase();
+
+searchButton.addEventListener("click", () => {
+  findWord(returnWordToFind());
+});
+
 searchField.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    findWord();
+    findWord(returnWordToFind());
   }
 });
 
