@@ -1,155 +1,148 @@
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	background-image: url("../img/british-flag.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: bottom;    
-    background-repeat: no-repeat;
-    opacity: 0.9;
+  background-image: url("../img/british-french-flags.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: 0.9;
 }
 
 .container {
-	width: 80%;
-	height: 632px;
-	margin-top: 2.3%;
-	margin-bottom: 2%;
-	border: solid 5px gold;
-	background-color: lightgrey;
-	font-family: verdana;
-	position: fixed;
-	margin-left: 10%;
-	margin-right: 10%;
+  width: 80%;
+  height: 632px;
+  margin-top: 2.3%;
+  margin-bottom: 2%;
+  border: solid 5px gold;
+  background-color: lightgrey;
+  font-family: verdana;
+  position: fixed;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.logo {
-	float: left;
-	padding-left: 20px;
+.logo-container {
+  float: left;
+  padding-left: 20px;
 }
 
 header {
-	text-align: center;
-	font-family: arial black;
-	padding-bottom: 20px;
-	padding-top: 20px;
-	height: 80px;
-	background-color: gold;
-	line-height: 2.5;
-	cursor: context-menu;
+  text-align: center;
+  font-family: arial black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  height: 80px;
+  background-color: gold;
+  line-height: 2.5;
 }
 
-.search-word {
-	padding: 20px;
-	line-height: 2;
-	background-color: lightgrey;
-	width: 21.8%;
-	float: left;
-	position: fixed;
-	font-weight: bolder;
+.search-field-container {
+  padding: 20px;
+  line-height: 2;
+  background-color: lightgrey;
+  width: 21.8%;
+  float: left;
+  position: fixed;
+  font-weight: bolder;
 }
 
-.search-word input[type="text"] {
-	width: 60%;
-	height: 30px;
-	padding-left: 5px;
-	font-family: verdana;
+.search-field-container input[type="text"] {
+  width: 60%;
+  height: 30px;
+  padding-left: 5px;
+  font-family: verdana;
 }
 
-.search-word input[type="button"] {
-	width:  35%;
-	height: 34px;
-	font-family: verdana;
+.search-field-container input[type="button"] {
+  width: 35%;
+  height: 34px;
+  font-family: verdana;
 }
 
-.search-word input[type="button"]:hover {
-	cursor: pointer;
+.search-field-container input[type="button"]:hover {
+  cursor: pointer;
 }
 
-.english-words-list {
-	height: 420px;
-	line-height: 2;
-	padding-bottom: 21px;
-	width: 24.7%;
-	background-color: ghostwhite;
-	position: fixed;
-	margin-top: 72px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-weight: bolder;
-	overflow-y: scroll;
+.english-words-list-container {
+  height: 420px;
+  line-height: 2;
+  width: 24.7%;
+  background-color: ghostwhite;
+  position: fixed;
+  margin-top: 72px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  overflow-y: scroll;
 }
 
-.english-words-list ul li {
-	width: 50%;
-	text-align: center;
+.english-words-list-container ul li {
+  width: 50%;
+  text-align: center;
 }
 
-.english-words-list ul {
-	list-style: none;
-	margin-left: 110px;
-	text-align: center;
+.english-words-list-container ul {
+  list-style: none;
+  margin-left: 110px;
+  text-align: center;
 }
 
-.english-words-list ul li:hover {
-	cursor: pointer;
-	color: dimgrey;
-	transform: scale(1.5);
+.english-words-list-container ul li:hover {
+  cursor: pointer;
+  color: dimgrey;
+  transform: scale(1.5);
 }
 
-.word {
-	background-color: rosybrown;
-	width: 69.1%;
-	height: 505px;
-	float: right;
-	text-align: center;
+.translation-container {
+  background-color: rosybrown;
+  width: 69.1%;
+  height: 505px;
+  float: right;
+  text-align: center;
 }
 
 .english-word-area {
-	background-color: ghostwhite;
-	border-bottom: dashed gold;
-	border-left: solid gold;
-	color: dimgrey;
-	padding: 19px;
-	height: 53px;
-	cursor: context-menu;
+  background-color: ghostwhite;
+  border-bottom: dashed gold;
+  border-left: solid gold;
+  color: dimgrey;
+  padding: 19px;
+  height: 53px;
 }
 
 .french-word-area {
-	background-color: ghostwhite;
-	border-bottom: dashed gold;
-	border-left: solid gold;
-	color: dimgrey;
-	padding: 19px;
-	height: 53px;
-	cursor: context-menu;
+  background-color: ghostwhite;
+  border-bottom: dashed gold;
+  border-left: solid gold;
+  color: dimgrey;
+  padding: 19px;
+  height: 53px;
 }
 
 .english-example-area {
-	background-color: lightgrey;
-	border-left: solid gold;
-	height: 113.5px;
-	padding-top: 20px;
-	border-bottom: dashed gold;
-	font-size: 20px;
-	cursor: context-menu;
+  background-color: lightgrey;
+  border-left: solid gold;
+  height: 113.5px;
+  padding-top: 20px;
+  border-bottom: dashed gold;
+  font-size: 20px;
 }
 
 .french-example-area {
-	background-color: lightgrey;
-	border-left: solid gold;
-	height: 113.5px;
-	padding-top: 20px;
-	font-size: 20px;
-	cursor: context-menu;
+  background-color: lightgrey;
+  border-left: solid gold;
+  height: 113.5px;
+  padding-top: 20px;
+  font-size: 20px;
 }
 
 footer {
-	background-color: gold;
-	height: 34px;
-	padding-top: 15px;
-	padding-bottom: 5px;
-	cursor: context-menu;
+  background-color: gold;
+  height: 34px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
